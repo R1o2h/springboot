@@ -7,7 +7,7 @@ import java.util.ArrayList;
 @RestController
 public class HelloController {
    private ArrayList<String> list =new ArrayList<String>();
-    @GetMapping("/hello/id")
+    @GetMapping("/hello/{id}")
     public String hello(@PathVariable String id) {
         if(list.isEmpty()) {
             return "Hello World";
